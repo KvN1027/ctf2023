@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="column is-6 is-offset-3 has-text-centered">
+                <div class="box">
+                    <h1 class="title">您確定真的要色色嗎?</h1>
+
+                    <form method="POST" action="/" id="loginForm">
+                        <button class="button is-block is-info is-fullwidth" type="submit">
+                            超級確定
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.getElementById("loginForm");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault(); // 阻止表單提交
+
+                swal({
+                    title: "",
+                    text: "",
+                    icon: "../static/a.png",
+                    closeOnClickOutside: false,
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
