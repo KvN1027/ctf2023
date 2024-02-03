@@ -1,1 +1,0 @@
-<?php echo "not here, find the secret DIR first"; ?>
