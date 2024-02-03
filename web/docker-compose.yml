@@ -1,0 +1,139 @@
+version: "3"
+
+services:
+  frontend_basic:
+    build:
+      context: frontend_basic/dontblockme
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: dontblockme #容器名稱
+    ports:
+      - 8001:80 
+
+  tool_usage_1:
+    build:
+      context: tool_usage/flashlight
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: flashlight #容器名稱
+    ports:
+      - 8002:80
+  
+  tool_usage_2:
+    build:
+      context: tool_usage/cyberfish
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: cyberfish #容器名稱
+    ports:
+      - 8003:80
+
+  tool_usage_3:
+    build:
+      context: tool_usage/bang
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: bang #容器名稱
+    ports:
+      - 8004:80
+
+  idor:
+    build:
+      context: idor/finance
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: finance #容器名稱
+    ports:
+      - 8005:80
+
+  path_traversal:
+    build:
+      context: path_traversal/freememe
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: freememe #容器名稱
+    ports:
+      - 8006:80
+
+  information_leakage:
+    build:
+      context: information_leakage/maintenance
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: maintenance #容器名稱
+    ports:
+      - 8007:80
+
+  lfi_1:
+    build:
+      context: lfi/process
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: process #容器名稱
+    ports:
+      - 8008:80
+
+  lfi_2:
+    build:
+      context: lfi/process2
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: process2 #容器名稱
+    ports:
+      - 8009:80
+
+  xss:
+    build:
+      context: xss/1want
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: 1want #容器名稱
+    ports:
+      - 8010:80
+
+  sql_injection_1:
+    build:
+      context: sql_injection/catsecret
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: catsecret #容器名稱
+    ports:
+      - 8011:80
+
+  sql_injection_2:
+    build:
+      context: sql_injection/dogsecret
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: dogsecret #容器名稱
+    ports:
+      - 8012:80
+
+  cmd_injection_1:
+    build:
+      context: cmd_injection/free_test
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: free_test #容器名稱
+    ports:
+      - 8013:80
+  
+  cmd_injection_2:
+    build:
+      context: cmd_injection/free_test2
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: free_test_2 #容器名稱
+    ports:
+      - 8014:80
+
+  ssti:
+    build:
+      context: ssti/trash_generator
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: trash_generator #容器名稱
+    ports:
+      - 8015:80
+
+  

@@ -1,0 +1,92 @@
+version: "3"
+
+services:
+  pwntools:
+    build:
+      context: pwntools
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: pwntools #容器名稱
+    ports:
+      - 9001:80
+
+  encode:
+    build:
+      context: encode
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: encode #容器名稱
+    ports:
+      - 9002:80
+  
+  cutnpaste:
+    build:
+      context: cutnpaste
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: cutnpaste #容器名稱
+    ports:
+      - 9003:80
+
+  byte_at_a_time:
+    build:
+      context: byte_at_a_time
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: byte_at_a_time #容器名稱
+    ports:
+      - 9004:80
+
+  bit_flipping:
+    build:
+      context: bit_flipping
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: bit_flipping #容器名稱
+    ports:
+      - 9005:80
+
+  padding_oracle:
+    build:
+      context: padding_oracle
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: padding_oracle #容器名稱
+    ports:
+      - 9006:80
+
+  padding_oracle2:
+    build:
+      context: padding_oracle2
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: padding_oracle2 #容器名稱
+    ports:
+      - 9007:80
+
+  crt:
+    build:
+      context: crt
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: crt #容器名稱
+    ports:
+      - 9008:80
+
+  little_n:
+    build:
+      context: little_n
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: little_n #容器名稱
+    ports:
+      - 9009:80
+
+  little_e:
+    build:
+      context: little_e
+      dockerfile: Dockerfile #基於Dockerfile建立image
+    restart: always
+    container_name: little_e #容器名稱
+    ports:
+      - 9010:80
